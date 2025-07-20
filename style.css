@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f8fb;
+  color: #222;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 22px;
+  color: #002855;
+}
+
+.address {
+  font-size: 14px;
+  color: #666;
+}
+
+/* News Flash */
+.news-flash {
+  display: block;
+  background-color: #0055aa;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.news-flash:hover {
+  background-color: #003d7a;
+}
+
+/* Form Section */
+main h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #004d99;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #444;
+}
+
+footer h3 {
+  color: #002855;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #0055aa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}

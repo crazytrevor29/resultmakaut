@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EVEN SEMESTER RESULT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Maulana_Abul_Kalam_Azad_University_of_Technology_Logo.svg/1200px-Maulana_Abul_Kalam_Azad_University_of_Technology_Logo.svg.png" alt="MAKAUT Logo" class="logo" />
+      <h1>MAULANA ABUL KALAM AZAD UNIVERSITY</h1>
+      <p class="address">(Formerly known as West Bengal University of Technology)<br />Kolkata, West Bengal, India</p>
+    </header>
+
+    <main>
+      <h2>EVEN SEMESTER RESULT</h2>
+      <form id="resultForm">
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="roll" name="roll" required />
+
+        <label for="reg">Registration Number:</label>
+        <input type="text" id="reg" name="reg" required />
+
+        <button type="submit">Submit</button>
+        <p id="message" style="margin-top: 15px; font-weight: bold;"></p>
+      </form>
+    </main>
+
+    <footer>
+      <h3>About Us</h3>
+      <p>Maulana Abul Kalam Azad University of Technology (MAKAUT), established in 2000, is a state university located in Haringhata, West Bengal. It offers undergraduate, postgraduate, and doctoral programs in engineering, technology, and management disciplines.</p>
+      <h3>Contact</h3>
+      <p>NH-12, Haringhata Farm, Nadia, West Bengal 741249<br />Phone: +91 33 2321 0731<br />Website: <a href="https://makautwb.ac.in" target="_blank">makautwb.ac.in</a></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("resultForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const roll = document.getElementById("roll").value.trim();
+      const reg = document.getElementById("reg").value.trim();
+      const message = document.getElementById("message");
+
+      if (roll === "1624058" && reg === "24873287320") {
+        message.style.color = "green";
+        message.innerText = "Hello Taufiq Raif. Even semester report card not out yet.";
+      } else {
+        message.style.color = "red";
+        message.innerText = "Invalid Roll or Registration Number. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>
