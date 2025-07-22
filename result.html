@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EVEN SEMESTER RESULT</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #pdfViewer {
+      display: none;
+      width: 100%;
+      height: 600px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    #downloadBtn {
+      display: none;
+      margin-top: 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    #downloadBtn:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 600px) {
+      #pdfViewer {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -26,6 +59,12 @@
         <button type="submit">Submit</button>
         <p id="message" style="margin-top: 15px; font-weight: bold;"></p>
       </form>
+
+      <iframe id="pdfViewer" src="result.pdf"></iframe>
+
+      <a id="downloadBtn" href="result.pdf" download>
+        Download Report Card (PDF)
+      </a>
     </main>
 
     <footer>
@@ -42,10 +81,15 @@
       const roll = document.getElementById("roll").value.trim();
       const reg = document.getElementById("reg").value.trim();
       const message = document.getElementById("message");
+      const form = document.getElementById("resultForm");
+      const pdf = document.getElementById("pdfViewer");
+      const downloadBtn = document.getElementById("downloadBtn");
 
       if (roll === "1624058" && reg === "24873287320") {
-        message.style.color = "green";
-        message.innerText = "Hello Taufiq Raif. Even semester report card not out yet.";
+        form.style.display = "none";
+        message.innerText = "";
+        pdf.style.display = "block";
+        downloadBtn.style.display = "inline-block";
       } else {
         message.style.color = "red";
         message.innerText = "Invalid Roll or Registration Number. Please try again.";
